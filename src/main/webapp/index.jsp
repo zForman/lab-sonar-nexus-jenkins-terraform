@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>DevOps Lab</title>
+    <title>DevOpsLab</title>
 
 
     <!-- Custom styles for this template -->
@@ -35,25 +35,14 @@
                 </button>
                 <a class="navbar-brand" href="#">EPAM DevOps AWS Lab</a>
             </div>
-            <div class="navbar-collapse collapse">
-                <form class="navbar-form navbar-right" role="form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Email" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" placeholder="Password" class="form-control">
-                    </div>
-                    <button type="submit" class="btn btn-success">Sign in</button>
-                </form>
-            </div>
         </div>
     </div>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
         <div class="container">
-            <h2 style="padding-top:20px;padding-bottom:10px">DevOps AWS Lab</h2>
-            <p>v.0.0.6</p>
+            <h2 style="padding-top:20px;padding-bottom:10px">DevOps Chain Tools: Terraform, AWS, Nexus, Ansible, Docker, Sonarqube</h2>
+            <p>Build v0.0.8</p>
         </div>
     </div>
 
