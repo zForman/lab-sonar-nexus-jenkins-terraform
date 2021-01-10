@@ -51,8 +51,8 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
     <div class="container">
-        <div></div>
-        <p>DevOps AWS Lab v.0.0.3</p>
+        <div>DevOps AWS Lab</div>
+        <p>v.0.0.4</p>
     </div>
 </div>
 
