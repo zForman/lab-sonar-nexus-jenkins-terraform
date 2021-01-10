@@ -44,17 +44,8 @@ pipeline {
                 }
             }
         }
-	
-        // stage ('Print ENV Variables') {
-        //     steps {
-        //         echo "Artifact ID is '${ArtifactId}'"
-        //         echo "Version is '${Version}'"
-        //         echo "GroupID is '${GroupId}'"
-        //         echo "Name is '${Name}'"
-        //     }
-        // }
 
-        stage ('Deploy') {
+        stage ('Deploy to Tomcat server') {
             steps {
                 // echo 'deploying ...'
                 sshPublisher(publishers: 
@@ -64,6 +55,26 @@ pipeline {
                         sshTransfer(
                             cleanRemote: false,
                             execCommand: 'ansible-playbook /opt/playbooks/downloadanddeploy_as_tomcat.yaml -i /opt/playbooks/hosts',
+                            execTimeout: 120000
+                        )
+                    ], 
+                    usePromotionTimestamp: false, 
+                    useWorkspaceInPromotion: false, 
+                    verbose: false)
+                    ])
+            }
+        }
+
+        stage ('Deploy to Docker server') {
+            steps {
+                // echo 'deploying ...'
+                sshPublisher(publishers: 
+                [sshPublisherDesc(
+                    configName: 'Ansible Controller', 
+                    transfers: [
+                        sshTransfer(
+                            cleanRemote: false,
+                            execCommand: 'ansible-playbook /opt/playbooks/downloadanddeploy_docker.yaml -i /opt/playbooks/hosts',
                             execTimeout: 120000
                         )
                     ], 
