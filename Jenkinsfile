@@ -39,7 +39,7 @@ pipeline {
             }
         }
 
-        stage ('Deploy to Tomcat server') {
+        stage ('Deploy to Prod Tomcat server') {
             steps {
                 // echo 'deploying ...'
                 sshPublisher(publishers: 
