@@ -18,12 +18,6 @@ pipeline {
             }
         }
 
-        stage ('Test') {
-            steps {
-                echo 'testing ...'
-            }
-        }
-
         stage ('Publish to Nexus') {
             steps {
                 script { 

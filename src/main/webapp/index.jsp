@@ -42,7 +42,7 @@
     <div class="jumbotron">
         <div class="container">
             <h2 style="padding-top:20px;padding-bottom:10px">DevOps Chain Tools: Terraform, AWS, Nexus, Ansible, Docker, Sonarqube</h2>
-            <p>Build v0.0.12</p>
+            <p>Build v0.0.13</p>
         </div>
     </div>
 
